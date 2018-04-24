@@ -21,7 +21,7 @@ const collections = new Collections({
             return `posts/index.html`
           }
           return `posts/${n}.html`
-        } 
+        }
       }
     }
   }
@@ -45,7 +45,7 @@ const records = new Records({
 
 module.exports = {
   devtool: 'source-map',
-  ignore: ['**/layout.html', '**/_*', '**/.*', 'readme.md', 'yarn.lock'],
+  ignore: ['**/layout.html', '**/.*', 'readme.md', 'yarn.lock'],
   reshape: htmlStandards({
     locals: ctx => {
       return collections.locals(ctx, Object.assign({ pageId: pageId(ctx) }, locals))
